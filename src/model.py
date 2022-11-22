@@ -2,7 +2,8 @@ import torch.nn as nn
 from torchvision import models
 from torchvision.models import ResNet34_Weights
 
-def build_model(pretrained=True, fine_tune=True, num_classes=10):
+
+def build_model(pretrained=True, fine_tune=True, num_classes=3):
     if pretrained:
         print(f'[INFO] Loading model with pretrained weights..')
         model = models.resnet34(weights=ResNet34_Weights)
